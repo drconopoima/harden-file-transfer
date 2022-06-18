@@ -1,0 +1,2280 @@
+{
+	"info": {
+		"_postman_id": "c5de910a-d89a-446c-895b-8cbac5dd4d2c",
+		"name": "File Sharing API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "List all Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users?limit=69954706",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "69954706",
+									"description": "How many items to return at one time (max 100)"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "A paged array of users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?limit=69954706",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "69954706"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "nulla in velit ex",
+									"description": "A link to the next page of responses"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"phone\": \"esse pariatur\",\n    \"id\": -27590234,\n    \"firstName\": \"nisi dolor laborum officia\",\n    \"lastName\": \"Duis\",\n    \"emailId\": \"Ut ex\",\n    \"tag\": \"ut tempor Excepteur deserunt\"\n  },\n  {\n    \"phone\": \"esse enim do\",\n    \"id\": -48355134,\n    \"firstName\": \"ut esse quis\",\n    \"lastName\": \"labore Duis velit\",\n    \"emailId\": \"occaecat\",\n    \"tag\": \"sint\"\n  }\n]"
+						},
+						{
+							"name": "Authentication information is missing or invalid",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?limit=69954706",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "69954706"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "WWW_Authenticate",
+									"value": "nulla in velit ex",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users?limit=69954706",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "69954706"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+						}
+					]
+				},
+				{
+					"name": "create a User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"phone\": \"sunt reprehenderit sit occaecat\",\n  \"id\": -63162929,\n  \"firstName\": \"esse voluptate dolor deserunt\",\n  \"lastName\": \"quis ut\",\n  \"emailId\": \"aliquip pariatur\",\n  \"tag\": \"in\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Null response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"phone\": \"sunt reprehenderit sit occaecat\",\n  \"id\": -63162929,\n  \"firstName\": \"esse voluptate dolor deserunt\",\n  \"lastName\": \"quis ut\",\n  \"emailId\": \"aliquip pariatur\",\n  \"tag\": \"in\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Authentication information is missing or invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"phone\": \"sunt reprehenderit sit occaecat\",\n  \"id\": -63162929,\n  \"firstName\": \"esse voluptate dolor deserunt\",\n  \"lastName\": \"quis ut\",\n  \"emailId\": \"aliquip pariatur\",\n  \"tag\": \"in\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "WWW_Authenticate",
+									"value": "nulla in velit ex",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"phone\": \"sunt reprehenderit sit occaecat\",\n  \"id\": -63162929,\n  \"firstName\": \"esse voluptate dolor deserunt\",\n  \"lastName\": \"quis ut\",\n  \"emailId\": \"aliquip pariatur\",\n  \"tag\": \"in\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Info for a specific user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users/:userId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "nulla in velit ex",
+									"description": "(Required) The id of the user to retrieve"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Expected response to a valid request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:userId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "nulla in velit ex",
+											"description": "(Required) The id of the user to retrieve"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"phone\": \"sunt reprehenderit sit occaecat\",\n  \"id\": -63162929,\n  \"firstName\": \"esse voluptate dolor deserunt\",\n  \"lastName\": \"quis ut\",\n  \"emailId\": \"aliquip pariatur\",\n  \"tag\": \"in\"\n}"
+						},
+						{
+							"name": "Authentication information is missing or invalid",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:userId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "nulla in velit ex",
+											"description": "(Required) The id of the user to retrieve"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "WWW_Authenticate",
+									"value": "nulla in velit ex",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:userId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "nulla in velit ex",
+											"description": "(Required) The id of the user to retrieve"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "files",
+			"item": [
+				{
+					"name": "{file Id}",
+					"item": [
+						{
+							"name": "Info for a specific file, meta data only. Does not download the content.",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/files/:fileId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files",
+										":fileId"
+									],
+									"variable": [
+										{
+											"key": "fileId",
+											"value": "nulla in velit ex",
+											"description": "(Required) The id of the file to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Expected response to a valid request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId"
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 84849464,\n  \"name\": \"velit anim\",\n  \"descr\": \"n\",\n  \"virus\": false,\n  \"ownedBy\": -73562189,\n  \"signature\": \"proiden\"\n}"
+								},
+								{
+									"name": "Authentication information is missing or invalid",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId"
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "WWW_Authenticate",
+											"value": "nulla in velit ex",
+											"description": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "unexpected error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId"
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Upload a file",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/files/fileId/upload",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files",
+										"fileId",
+										"upload"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Upload File response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "file",
+											"file": {}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/upload",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"upload"
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Authentication information is missing or invalid",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "file",
+											"file": {}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/upload",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"upload"
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "WWW_Authenticate",
+											"value": "nulla in velit ex",
+											"description": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "unexpected error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "file",
+											"file": {}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/upload",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"upload"
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete a file",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/octet-stream"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/files/:fileId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files",
+										":fileId"
+									],
+									"variable": [
+										{
+											"key": "fileId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Download a files",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/octet-stream"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/files/:fileId/download?token=exercitation voluptate nostrud",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files",
+										":fileId",
+										"download"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "exercitation voluptate nostrud"
+										}
+									],
+									"variable": [
+										{
+											"key": "fileId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Download File response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/download?token=exercitation voluptate nostrud",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"download"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "exercitation voluptate nostrud"
+												}
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/octet-stream"
+										}
+									],
+									"cookie": [],
+									"body": "nulla in velit ex"
+								},
+								{
+									"name": "Authentication information is missing or invalid",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/download?token=exercitation voluptate nostrud",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"download"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "exercitation voluptate nostrud"
+												}
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "WWW_Authenticate",
+											"value": "nulla in velit ex",
+											"description": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "unexpected error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/download?token=exercitation voluptate nostrud",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"download"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "exercitation voluptate nostrud"
+												}
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Generate a shareable URL for given file",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/octet-stream"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/files/:fileId/share?userName=ipsum aute ea in&expires=et",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files",
+										":fileId",
+										"share"
+									],
+									"query": [
+										{
+											"key": "userName",
+											"value": "ipsum aute ea in"
+										},
+										{
+											"key": "expires",
+											"value": "et"
+										}
+									],
+									"variable": [
+										{
+											"key": "fileId",
+											"value": "nulla in velit ex",
+											"description": "(Required) The id of the file to retrieve"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Download File response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/share?userName=ipsum aute ea in&expires=et",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"share"
+											],
+											"query": [
+												{
+													"key": "userName",
+													"value": "ipsum aute ea in"
+												},
+												{
+													"key": "expires",
+													"value": "et"
+												}
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/octet-stream"
+										}
+									],
+									"cookie": [],
+									"body": "nulla in velit ex"
+								},
+								{
+									"name": "Authentication information is missing or invalid",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/share?userName=ipsum aute ea in&expires=et",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"share"
+											],
+											"query": [
+												{
+													"key": "userName",
+													"value": "ipsum aute ea in"
+												},
+												{
+													"key": "expires",
+													"value": "et"
+												}
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "WWW_Authenticate",
+											"value": "nulla in velit ex",
+											"description": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "unexpected error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/share?userName=ipsum aute ea in&expires=et",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"share"
+											],
+											"query": [
+												{
+													"key": "userName",
+													"value": "ipsum aute ea in"
+												},
+												{
+													"key": "expires",
+													"value": "et"
+												}
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to retrieve"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Recovers a deleted file",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/files/:fileId/recover",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files",
+										":fileId",
+										"recover"
+									],
+									"variable": [
+										{
+											"key": "fileId",
+											"value": "nulla in velit ex",
+											"description": "(Required) The id of the file to recover"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Upload File response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/recover",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"recover"
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to recover"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Authentication information is missing or invalid",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/recover",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"recover"
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to recover"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "WWW_Authenticate",
+											"value": "nulla in velit ex",
+											"description": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "unexpected error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/files/:fileId/recover",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"files",
+												":fileId",
+												"recover"
+											],
+											"variable": [
+												{
+													"key": "fileId",
+													"value": "nulla in velit ex",
+													"description": "(Required) The id of the file to recover"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "List all files",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/files?limit=69954706",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"files"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "69954706",
+									"description": "How many items to return at one time (max 100)"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "A paged array of files",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/files?limit=69954706",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "69954706"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-next",
+									"value": "nulla in velit ex",
+									"description": "A link to the next page of responses"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 50036504,\n    \"name\": \"officia Lorem\",\n    \"descr\": \"ut in \",\n    \"virus\": true,\n    \"ownedBy\": 31275496,\n    \"signature\": \"nulla cil\"\n  },\n  {\n    \"id\": -86818827,\n    \"name\": \"mollit nostrud dolor\",\n    \"descr\": \"reprehenderit sunt elit ut\",\n    \"virus\": false,\n    \"ownedBy\": -70157634,\n    \"signature\": \"sunt L\"\n  }\n]"
+						},
+						{
+							"name": "Authentication information is missing or invalid",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/files?limit=69954706",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "69954706"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "WWW_Authenticate",
+									"value": "nulla in velit ex",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/files?limit=69954706",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "69954706"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Creates a file Object with meta data but not the file yet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"velit anim\",\n  \"descr\": \"n\",\n  \"virus\": false,\n  \"ownedBy\": -73562189,\n  \"signature\": \"proiden\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/files",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"files"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Null response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 84849464,\n  \"name\": \"velit anim\",\n  \"descr\": \"n\",\n  \"virus\": false,\n  \"ownedBy\": -73562189,\n  \"signature\": \"proiden\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/files",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Authentication information is missing or invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 84849464,\n  \"name\": \"velit anim\",\n  \"descr\": \"n\",\n  \"virus\": false,\n  \"ownedBy\": -73562189,\n  \"signature\": \"proiden\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/files",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "WWW_Authenticate",
+									"value": "nulla in velit ex",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "unexpected error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 84849464,\n  \"name\": \"velit anim\",\n  \"descr\": \"n\",\n  \"virus\": false,\n  \"ownedBy\": -73562189,\n  \"signature\": \"proiden\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/files",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "text/plain"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "emailId",
+							"value": "eu do velit",
+							"description": "(Required) "
+						},
+						{
+							"key": "password",
+							"value": "elit labore commodo fugiat",
+							"description": "(Required) "
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "emailId",
+									"value": "eu do velit",
+									"description": "(Required) "
+								},
+								{
+									"key": "password",
+									"value": "elit labore commodo fugiat",
+									"description": "(Required) "
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Authentication information is missing or invalid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "emailId",
+									"value": "eu do velit",
+									"description": "(Required) "
+								},
+								{
+									"key": "password",
+									"value": "elit labore commodo fugiat",
+									"description": "(Required) "
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "WWW_Authenticate",
+							"value": "nulla in velit ex",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "unexpected error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "emailId",
+									"value": "eu do velit",
+									"description": "(Required) "
+								},
+								{
+									"key": "password",
+									"value": "elit labore commodo fugiat",
+									"description": "(Required) "
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Logout flow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/logout",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Authentication information is missing or invalid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "WWW_Authenticate",
+							"value": "nulla in velit ex",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "unexpected error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Change Password Flow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "text/plain"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oldPassword",
+							"value": "esse fugiat",
+							"description": "(Required) "
+						},
+						{
+							"key": "newPassword",
+							"value": "enim consequat",
+							"description": "(Required) "
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/changePassword",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"changePassword"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Change Password response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "esse fugiat",
+									"description": "(Required) "
+								},
+								{
+									"key": "newPassword",
+									"value": "enim consequat",
+									"description": "(Required) "
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changePassword",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changePassword"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "Authentication information is missing or invalid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "esse fugiat",
+									"description": "(Required) "
+								},
+								{
+									"key": "newPassword",
+									"value": "enim consequat",
+									"description": "(Required) "
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changePassword",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changePassword"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "WWW_Authenticate",
+							"value": "nulla in velit ex",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "unexpected error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "esse fugiat",
+									"description": "(Required) "
+								},
+								{
+									"key": "newPassword",
+									"value": "enim consequat",
+									"description": "(Required) "
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/changePassword",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"changePassword"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"code\": 52345028,\n  \"message\": \"aliquip ipsum enim in\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "<Bearer Token>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://ShareSafe.apisecurity.liveproject.manning.com/v1",
+			"type": "string"
+		}
+	]
+}
